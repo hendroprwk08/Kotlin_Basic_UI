@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout_id"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrasi"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Lengkap"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama lengkap"
+                android:id="@+id/et_nama"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nomer Pokok Mahasiswa"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="NPM"
+                android:id="@+id/et_npm"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alamat domisili sesuai kartu identitas"/>
+
+            <EditText
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:gravity="top|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alamat"
+                android:id="@+id/et_alamat"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Program Studi"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/prodi"
+                android:id="@+id/sp_prodi"
+                android:padding="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Domisili" />
+
+            <RadioGroup
+                android:id="@+id/rg_domisili"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_DK"
+                    android:checked="true"
+                    android:text="Dalam Kota"/>
+
+                <RadioButton
+                    android:id="@+id/rb_LK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Luar Kota" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hobi"/>
+
+            <CheckBox
+                android:id="@+id/cb_teknologi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teknologi"/>
+
+            <CheckBox
+                android:id="@+id/cb_kuliner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kuliner"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_200"
+                android:text="LIHAT DETIL"
+                android:id="@+id/bt_detil"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_200"
+                    android:textColor="#fff"
+                    android:hint="TOAST"
+                    android:layout_weight="1"
+                    android:id="@+id/bt_toast"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_700"
+                    android:textColor="#fff"
+                    android:hint="DIALOG"
+                    android:layout_weight="1"
+                    android:id="@+id/bt_dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="NOTIFIKASI"
+                    android:id="@+id/bt_notif"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="SNACK BAR"
+                    android:id="@+id/bt_snack"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="KELUAR"
+                    android:id="@+id/bt_keluar"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
